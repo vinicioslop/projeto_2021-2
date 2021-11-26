@@ -6,32 +6,39 @@ namespace Projeto2021_2
     {
         static void Main(string[] args)
         {
-            int opcao = -1;
+            int opcao = -1, pagina = 0;
 
             do
             {
-                Console.Clear();
-
-                Console.WriteLine(" +**************************************************+");
-                Console.WriteLine(" |         Bem-vindo ao Projeto 2021/2!             |");
-                Console.WriteLine(" +==================================================+");
-                Console.WriteLine(" | Escolha uma das opÁıes abaixo para realizaÁ„o de |");
-                Console.WriteLine(" | c·lculos matem·ticos.                            |");
-                Console.WriteLine(" +==================================================+");
-                Console.WriteLine(" | 1 - SOMA                                         |");
-                Console.WriteLine(" | 2 - SUBTRA«√O                                    |");
-                Console.WriteLine(" | 3 - MULTIPLICA«√O                                |");
-                Console.WriteLine(" | 4 - DIVIS√O                                      |");
-                Console.WriteLine(" | 5 - EXPONENCIA«√O                                |");
-                Console.WriteLine(" | 6 - RADICIA«√O                                   |");
-                Console.WriteLine(" | 7 - FATORIAL                                     |");
-                Console.WriteLine(" | 0 - SAIR                                         |");
-                Console.WriteLine(" +--------------------------------------------------+");
+                switch(pagina)
+                {
+                    case 0:
+                        PrimeiraPagina();
+                        break;
+                    case 1:
+                        SegundaPagina();
+                        break;
+                    default:
+                        throw new Exception("Op√ß√£o inv√°lida!!!");
+                        break;
+                }
 
                 try
                 {
-                    Console.Write("\n  OpÁ„o desejada: ");
+                    Console.Write("\n  Op√ß√£o desejada: ");
                     opcao = Convert.ToInt32(Console.ReadLine());
+
+                    if(opcao == 9)
+                    {
+                        if (pagina == 1)
+                        {
+                            pagina = 0;
+                            continue;
+                        }
+
+                        pagina = 1;
+                        continue;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -44,9 +51,57 @@ namespace Projeto2021_2
         }
         static void TrataErro(Exception ex)
         {
-            Console.WriteLine("\n  Ocorreu algum erro durante a execuÁ„o! Tente novamente.");
+            Console.WriteLine("\n  Ocorreu algum erro durante a execu√ß√£o! Tente novamente.");
             Console.WriteLine("  Erro: " + ex.Message);
             EsperaTecla();
+        }
+        static void PrimeiraPagina()
+        {
+            Console.Clear();
+
+            Console.WriteLine(" +**************************************************+");
+            Console.WriteLine(" |         Bem-vindo ao Projeto 2021/2!             |");
+            Console.WriteLine(" +==================================================+");
+            Console.WriteLine(" | Escolha uma das op√ß√µes abaixo para realiza√ß√£o de |");
+            Console.WriteLine(" | c√°lculos matem√°ticos.                            |");
+            Console.WriteLine(" +==================================================+");
+            Console.WriteLine(" | 1 - SOMA                                         |");
+            Console.WriteLine(" | 2 - SUBTRA√á√ÉO                                    |");
+            Console.WriteLine(" | 3 - MULTIPLICA√á√ÉO                                |");
+            Console.WriteLine(" | 4 - DIVIS√ÉO                                      |");
+            Console.WriteLine(" | 5 - EXPONENCIA√á√ÉO                                |");
+            Console.WriteLine(" | 6 - RADICIA√á√ÉO                                   |");
+            Console.WriteLine(" | 7 - FATORIAL                                     |");
+            Console.WriteLine(" | 8 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 9 - PR√ìXIMA P√ÅGINA                               |");
+            Console.WriteLine(" | 0 - SAIR                                         |");
+            Console.WriteLine(" +--------------------------------------------------+");
+            Console.WriteLine(" | P√ÅGINA 1/2                                       |");
+            Console.WriteLine(" +==================================================+");
+        }
+        static void SegundaPagina()
+        {
+            Console.Clear();
+
+            Console.WriteLine(" +**************************************************+");
+            Console.WriteLine(" |         Bem-vindo ao Projeto 2021/2!             |");
+            Console.WriteLine(" +==================================================+");
+            Console.WriteLine(" | Escolha uma das op√ß√µes abaixo para realiza√ß√£o de |");
+            Console.WriteLine(" | c√°lculos matem√°ticos.                            |");
+            Console.WriteLine(" +==================================================+");
+            Console.WriteLine(" | 1 - SOMA                                         |");
+            Console.WriteLine(" | 2 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 3 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 4 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 5 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 6 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 7 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 8 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 9 - VOLTAR                                       |");
+            Console.WriteLine(" | 0 - SAIR                                         |");
+            Console.WriteLine(" +--------------------------------------------------+");
+            Console.WriteLine(" | P√ÅGINA 2/2                                       |");
+            Console.WriteLine(" +==================================================+");
         }
         static void DirecionaOpcao(int opcao)
         {
@@ -77,7 +132,7 @@ namespace Projeto2021_2
                     Console.WriteLine("\n  Saindo...");
                     break;
                 default:
-                    Console.WriteLine("  OpÁ„o inv·lida!");
+                    Console.WriteLine("  Op√ß√£o inv√°lida!");
                     EsperaTecla();
                     break;
             }
@@ -122,7 +177,7 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |            INTERFACE DE SUBTRA«√O                |");
+            Console.WriteLine("  |            INTERFACE DE SUBTRA√á√ÉO                |");
             Console.WriteLine("  +--------------------------------------------------+\n");
 
             double valor01 = 0, valor02 = 0;
@@ -152,7 +207,7 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |          INTERFACE DE MULTIPLICA«√O              |");
+            Console.WriteLine("  |          INTERFACE DE MULTIPLICA√á√ÉO              |");
             Console.WriteLine("  +--------------------------------------------------+\n");
 
             double valor01 = 0, valor02 = 0;
@@ -182,7 +237,7 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |             INTERFACE DE DIVIS√O                 |");
+            Console.WriteLine("  |             INTERFACE DE DIVIS√ÉO                 |");
             Console.WriteLine("  +--------------------------------------------------+\n");
 
             double dividendo = 0, divisor = 0;
@@ -212,7 +267,7 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |           INTERFACE DE EXPONENCIA«√O             |");
+            Console.WriteLine("  |           INTERFACE DE EXPONENCIA√á√ÉO             |");
             Console.WriteLine("  +--------------------------------------------------+\n");
 
             double valorBase = 0, valorExpoente = 0;
@@ -242,7 +297,7 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |            INTERFACE DE RADICIA«√O               |");
+            Console.WriteLine("  |            INTERFACE DE RADICIA√á√ÉO               |");
             Console.WriteLine("  +--------------------------------------------------+\n");
 
 
@@ -253,7 +308,7 @@ namespace Projeto2021_2
                 Console.Write("  Informe o radicando: ");
                 radicando = Convert.ToDouble(Console.ReadLine());
 
-                Console.Write("  Informe o Ìndice...: ");
+                Console.Write("  Informe o √≠ndice...: ");
                 indice = Convert.ToDouble(Console.ReadLine());
             }
             catch (Exception ex)
@@ -264,7 +319,7 @@ namespace Projeto2021_2
 
             double resultado = Math.Pow(radicando, 1 / indice);
 
-            Console.Write($"\n  O resultado È {resultado:N3}\n");
+            Console.Write($"\n  O resultado √© {resultado:N3}\n");
 
             EsperaTecla();
         }
@@ -286,7 +341,7 @@ namespace Projeto2021_2
 
                 if (entrada < 0)
                 {
-                    throw new Exception("Valor informado È negativo!");
+                    throw new Exception("Valor informado √© negativo!");
                 }
             }
             catch (Exception ex)
