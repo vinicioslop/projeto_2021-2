@@ -3,7 +3,7 @@ using System;
 namespace Projeto2021_2
 {
     class Program
-    {
+    {        
         static void Main(string[] args)
         {
             int opcao = -1, pagina = 0;
@@ -46,7 +46,14 @@ namespace Projeto2021_2
                     continue;
                 }
 
-                DirecionaOpcao(opcao);
+                if (pagina == 0)
+                {
+                    DirecionaOpcaoPrimeiraPagina(opcao);
+                }
+                else
+                {
+                    DirecionaOpcaoSegundaPagina(opcao);
+                }
             } while (opcao != 0);
         }
         static void TrataErro(Exception ex)
@@ -89,7 +96,7 @@ namespace Projeto2021_2
             Console.WriteLine(" | Escolha uma das opções abaixo para realização de |");
             Console.WriteLine(" | cálculos matemáticos.                            |");
             Console.WriteLine(" +==================================================+");
-            Console.WriteLine(" | 1 - SOMA                                         |");
+            Console.WriteLine(" | 1 - SOBRE                                        |");
             Console.WriteLine(" | 2 - NADA IMPLEMENTADO AQUI                       |");
             Console.WriteLine(" | 3 - NADA IMPLEMENTADO AQUI                       |");
             Console.WriteLine(" | 4 - NADA IMPLEMENTADO AQUI                       |");
@@ -103,7 +110,7 @@ namespace Projeto2021_2
             Console.WriteLine(" | PÁGINA 2/2                                       |");
             Console.WriteLine(" +==================================================+");
         }
-        static void DirecionaOpcao(int opcao)
+        static void DirecionaOpcaoPrimeiraPagina(int opcao)
         {
             switch (opcao)
             {
@@ -128,11 +135,48 @@ namespace Projeto2021_2
                 case 7:
                     Fatorial();
                     break;
+                case 8:
+                    Nothing();
+                    break;
                 case 0:
                     Console.WriteLine("\n  Saindo...");
                     break;
                 default:
                     Console.WriteLine("  Opção inválida!");
+                    EsperaTecla();
+                    break;
+            }
+        }
+        static void DirecionaOpcaoSegundaPagina(int opcao)
+        {
+            switch (opcao)
+            {
+                case 1:
+                    Creditos();
+                    break;
+                case 2:
+                    Nothing();
+                    break;
+                case 3:
+                    Nothing();
+                    break;
+                case 4:
+                    Nothing();
+                    break;
+                case 5:
+                    Nothing();
+                    break;
+                case 6:
+                    Nothing();
+                    break;
+                case 7:
+                    Nothing();
+                    break;
+                case 0:
+                    Console.WriteLine("\n  Saindo...");
+                    break;
+                default:
+                    Console.WriteLine("\n  Opção inválida!");
                     EsperaTecla();
                     break;
             }
@@ -323,7 +367,6 @@ namespace Projeto2021_2
 
             EsperaTecla();
         }
-
         static void Fatorial()
         {
             Console.Clear();
@@ -362,6 +405,31 @@ namespace Projeto2021_2
             }
 
             Console.WriteLine($"\n  {entrada}! = {fat}");
+
+            EsperaTecla();
+        }
+        static void Nothing()
+        {
+            Console.WriteLine("\n  There is nothing to see here, go away!!!");
+
+            EsperaTecla();
+        }
+        static void Creditos()
+        {
+            Console.Clear();
+
+            Console.WriteLine("  ────────▄▄▄▄▄▄────────   Projetinho realizado para finalização");
+            Console.WriteLine("  ──────█▀──────▀█──────   do módulo de programação em .NET C#,");
+            Console.WriteLine("  ─────█─▄▀█──█▀▄─█─────   alternando em versões.");
+            Console.WriteLine("  ────▐▌──────────▐▌────");
+            Console.WriteLine("  ────█▌▀▄──▄▄──▄▀▐█────   user: vinicioslop");
+            Console.WriteLine("  ───▐██──▀▀──▀▀──██▌───");
+            Console.WriteLine("  ──▄████▄──▐▌──▄████▄──");
+            Console.WriteLine("\n");
+
+            // A IMPLEMENTAR
+            Console.Write("  Sair do programa? (S)im ou (N)ão: ");
+            string opcao = Console.ReadLine().ToUpper();
 
             EsperaTecla();
         }
