@@ -79,7 +79,7 @@ namespace Projeto2021_2
             Console.WriteLine(" | 5 - EXPONENCIAÇÃO                                |");
             Console.WriteLine(" | 6 - RADICIAÇÃO                                   |");
             Console.WriteLine(" | 7 - FATORIAL                                     |");
-            Console.WriteLine(" | 8 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 8 - ***NADA***                                   |");
             Console.WriteLine(" | 9 - PRÓXIMA PÁGINA                               |");
             Console.WriteLine(" | 0 - SAIR                                         |");
             Console.WriteLine(" +--------------------------------------------------+");
@@ -97,13 +97,13 @@ namespace Projeto2021_2
             Console.WriteLine(" | cálculos matemáticos.                            |");
             Console.WriteLine(" +==================================================+");
             Console.WriteLine(" | 1 - SOBRE                                        |");
-            Console.WriteLine(" | 2 - NADA IMPLEMENTADO AQUI                       |");
-            Console.WriteLine(" | 3 - NADA IMPLEMENTADO AQUI                       |");
-            Console.WriteLine(" | 4 - NADA IMPLEMENTADO AQUI                       |");
-            Console.WriteLine(" | 5 - NADA IMPLEMENTADO AQUI                       |");
-            Console.WriteLine(" | 6 - NADA IMPLEMENTADO AQUI                       |");
-            Console.WriteLine(" | 7 - NADA IMPLEMENTADO AQUI                       |");
-            Console.WriteLine(" | 8 - NADA IMPLEMENTADO AQUI                       |");
+            Console.WriteLine(" | 2 - ***NADA***                                   |");
+            Console.WriteLine(" | 3 - ***NADA***                                   |");
+            Console.WriteLine(" | 4 - ***NADA***                                   |");
+            Console.WriteLine(" | 5 - ***NADA***                                   |");
+            Console.WriteLine(" | 6 - ***NADA***                                   |");
+            Console.WriteLine(" | 7 - ***NADA***                                   |");
+            Console.WriteLine(" | 8 - ***NADA***                                   |");
             Console.WriteLine(" | 9 - VOLTAR                                       |");
             Console.WriteLine(" | 0 - SAIR                                         |");
             Console.WriteLine(" +--------------------------------------------------+");
@@ -423,7 +423,7 @@ namespace Projeto2021_2
             Console.WriteLine("  ─────█─▄▀█──█▀▄─█─────   alternando em versões.");
             Console.WriteLine("  ────▐▌──────────▐▌────");
             Console.WriteLine("  ────█▌▀▄──▄▄──▄▀▐█────   user: vinicioslop");
-            Console.WriteLine("  ───▐██──▀▀──▀▀──██▌───");
+            Console.WriteLine("  ───▐██──▀▀──▀▀──██▌───   link: LINK AQUI");
             Console.WriteLine("  ──▄████▄──▐▌──▄████▄──");
             Console.WriteLine("\n");
 
