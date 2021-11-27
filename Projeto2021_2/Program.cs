@@ -67,7 +67,7 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine(" +**************************************************+");
-            Console.WriteLine(" |         Bem-vindo ao Projeto 2021/2!             |");
+            Console.WriteLine(" | █████████ Bem-vindo ao Projeto 2021/2! █████████ |");
             Console.WriteLine(" +==================================================+");
             Console.WriteLine(" | Escolha uma das opções abaixo para realização de |");
             Console.WriteLine(" | cálculos matemáticos.                            |");
@@ -79,11 +79,11 @@ namespace Projeto2021_2
             Console.WriteLine(" | 5 - EXPONENCIAÇÃO                                |");
             Console.WriteLine(" | 6 - RADICIAÇÃO                                   |");
             Console.WriteLine(" | 7 - FATORIAL                                     |");
-            Console.WriteLine(" | 8 - ***NADA***                                   |");
+            Console.WriteLine(" | 8 - MAIOR DIVISOR COMUM                          |");
             Console.WriteLine(" | 9 - PRÓXIMA PÁGINA                               |");
             Console.WriteLine(" | 0 - SAIR                                         |");
             Console.WriteLine(" +--------------------------------------------------+");
-            Console.WriteLine(" | PÁGINA 1/2                                       |");
+            Console.WriteLine(" | ██████████████████ PÁGINA 1/2 ██████████████████ |");
             Console.WriteLine(" +==================================================+");
         }
         static void SegundaPagina()
@@ -91,23 +91,23 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine(" +**************************************************+");
-            Console.WriteLine(" |         Bem-vindo ao Projeto 2021/2!             |");
+            Console.WriteLine(" | █████████ Bem-vindo ao Projeto 2021/2! █████████ |");
             Console.WriteLine(" +==================================================+");
             Console.WriteLine(" | Escolha uma das opções abaixo para realização de |");
             Console.WriteLine(" | cálculos matemáticos.                            |");
             Console.WriteLine(" +==================================================+");
-            Console.WriteLine(" | 1 - SOBRE                                        |");
-            Console.WriteLine(" | 2 - ***NADA***                                   |");
-            Console.WriteLine(" | 3 - ***NADA***                                   |");
-            Console.WriteLine(" | 4 - ***NADA***                                   |");
-            Console.WriteLine(" | 5 - ***NADA***                                   |");
-            Console.WriteLine(" | 6 - ***NADA***                                   |");
-            Console.WriteLine(" | 7 - ***NADA***                                   |");
-            Console.WriteLine(" | 8 - ***NADA***                                   |");
+            Console.WriteLine(" | 1 - ESTIMA PI                                    |");
+            Console.WriteLine(" | 2 - ESTIMA EULER                                 |");
+            Console.WriteLine(" |                                                  |");
+            Console.WriteLine(" |                                                  |");
+            Console.WriteLine(" |                                                  |");
+            Console.WriteLine(" |                                                  |");
+            Console.WriteLine(" |                                                  |");
+            Console.WriteLine(" | 8 - SOBRE O PROJETO                              |");
             Console.WriteLine(" | 9 - VOLTAR                                       |");
             Console.WriteLine(" | 0 - SAIR                                         |");
             Console.WriteLine(" +--------------------------------------------------+");
-            Console.WriteLine(" | PÁGINA 2/2                                       |");
+            Console.WriteLine(" | ██████████████████ PÁGINA 2/2 ██████████████████ |");
             Console.WriteLine(" +==================================================+");
         }
         static void DirecionaOpcaoPrimeiraPagina(int opcao)
@@ -136,7 +136,7 @@ namespace Projeto2021_2
                     Fatorial();
                     break;
                 case 8:
-                    Nothing();
+                    MDC();
                     break;
                 case 0:
                     Console.WriteLine("\n  Saindo...");
@@ -152,10 +152,10 @@ namespace Projeto2021_2
             switch (opcao)
             {
                 case 1:
-                    Creditos();
+                    EstimaPI();
                     break;
                 case 2:
-                    Nothing();
+                    EstimaEuler();
                     break;
                 case 3:
                     Nothing();
@@ -171,6 +171,9 @@ namespace Projeto2021_2
                     break;
                 case 7:
                     Nothing();
+                    break;
+                case 8:
+                    Creditos();
                     break;
                 case 0:
                     Console.WriteLine("\n  Saindo...");
@@ -191,8 +194,8 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine(" +**************************************************+");
-            Console.WriteLine(" |              INTERFACE DE SOMA                   |");
-            Console.WriteLine(" +--------------------------------------------------+\n");
+            Console.WriteLine(" | ████████████████████ SOMA ██████████████████████ |");
+            Console.WriteLine(" +==================================================+\n");
 
             double valor01 = 0, valor02 = 0;
 
@@ -221,8 +224,8 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |            INTERFACE DE SUBTRAÇÃO                |");
-            Console.WriteLine("  +--------------------------------------------------+\n");
+            Console.WriteLine("  | ██████████████████ SUBTRAÇÃO ███████████████████ |");
+            Console.WriteLine("  +==================================================+\n");
 
             double valor01 = 0, valor02 = 0;
 
@@ -251,8 +254,8 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |          INTERFACE DE MULTIPLICAÇÃO              |");
-            Console.WriteLine("  +--------------------------------------------------+\n");
+            Console.WriteLine("  | ████████████████ MULTIPLICAÇÃO █████████████████ |");
+            Console.WriteLine("  +==================================================+\n");
 
             double valor01 = 0, valor02 = 0;
 
@@ -281,8 +284,8 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |             INTERFACE DE DIVISÃO                 |");
-            Console.WriteLine("  +--------------------------------------------------+\n");
+            Console.WriteLine("  | ████████████████████ DIVISÃO ███████████████████ |");
+            Console.WriteLine("  +==================================================+\n");
 
             double dividendo = 0, divisor = 0;
 
@@ -311,8 +314,8 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |           INTERFACE DE EXPONENCIAÇÃO             |");
-            Console.WriteLine("  +--------------------------------------------------+\n");
+            Console.WriteLine("  | █████████████████ EXPONENCIAÇÃO ████████████████ |");
+            Console.WriteLine("  +==================================================+\n");
 
             double valorBase = 0, valorExpoente = 0;
 
@@ -341,8 +344,8 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |            INTERFACE DE RADICIAÇÃO               |");
-            Console.WriteLine("  +--------------------------------------------------+\n");
+            Console.WriteLine("  | █████████████████ RADICIAÇÃO ███████████████████ |");
+            Console.WriteLine("  +==================================================+\n");
 
 
             double radicando = 0, indice = 0;
@@ -372,10 +375,10 @@ namespace Projeto2021_2
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  |            INTERFACE DE FATORIAL                 |");
-            Console.WriteLine("  +--------------------------------------------------+\n");
+            Console.WriteLine("  | ███████████████████ FATORIAL ███████████████████ |");
+            Console.WriteLine("  +==================================================+\n");
 
-            int fat = 1, entrada = 0;
+            int fat = 0, entrada = 0;
 
             try
             {
@@ -393,10 +396,19 @@ namespace Projeto2021_2
                 return;
             }
 
+            fat = retornaFat(entrada);
+
+            Console.WriteLine($"\n  {entrada}! = {fat}");
+
+            EsperaTecla();
+        }
+        static int retornaFat(int entrada)
+        {
+            int fat = 1;
+            
             if (entrada == 0)
             {
-                Console.WriteLine($"\n  {entrada}! = {fat + 1}");
-                return;
+                return fat;
             }
 
             for (int i = 2; i <= entrada; i++)
@@ -404,12 +416,108 @@ namespace Projeto2021_2
                 fat *= i;
             }
 
-            Console.WriteLine($"\n  {entrada}! = {fat}");
+            return fat;
+        }
+        static void MDC()
+        {
+            Console.Clear();
+
+            Console.WriteLine("  +**************************************************+");
+            Console.WriteLine("  | ███████ MÁXIMO DIVISOR COMUM (ITERATIVO) ███████ |");
+            Console.WriteLine("  +==================================================+\n");
+            
+            int valor01 = 0, valor02 = 0;
+
+            try
+            {
+                Console.Write("  Digite o 1º número (a): ");
+                valor01 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("  Digite o 2º número (b): ");
+                valor02 = Convert.ToInt32(Console.ReadLine());
+            }
+            catch(Exception ex)
+            {
+                TrataErro(ex);
+                return;
+            }
+
+            int r = -1, a = valor01, b = valor02;
+
+            while (b != 0)
+            {
+                r = a % b;
+                a = b;
+                b = r;
+            }
+
+            int mdc = a;
+
+            Console.WriteLine($"\n  MDC(a, b) = {mdc}");
+
+            EsperaTecla();
+        }
+        static void EstimaPI()
+        {
+            Console.Clear();
+
+            Console.WriteLine("  +**************************************************+");
+            Console.WriteLine("  | ███████████████████ ESTIMA PI ██████████████████ |");
+            Console.WriteLine("  +==================================================+\n");
+            
+            double pi = 0.0, aux = 3;
+
+            Console.Write("\n  Quantas iterações? ");
+            int iteracoes = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i <= iteracoes - 1; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    pi += 1 / aux;
+                    aux += 2;
+                }
+                else
+                {
+                    pi -= 1 / aux;
+                    aux += 2;
+                }
+            }
+
+            pi = pi - 1;
+            pi = pi * 4;
+            pi = pi*(-1);
+
+            Console.WriteLine($"\n  Estimativa: {pi:N6}");
+
+            EsperaTecla();
+        }
+        static void EstimaEuler()
+        {
+            Console.Clear();
+
+            Console.WriteLine("  +**************************************************+");
+            Console.WriteLine("  | ██████████████████ ESTIMA EULER ████████████████ |");
+            Console.WriteLine("  +==================================================+\n");
+            
+            double euler = 0;
+
+            Console.Write("\n  Quantas iterações (<=33)? ");
+            double iteracoes = Convert.ToDouble(Console.ReadLine());
+
+            for (int i = 0; i < iteracoes; i++)
+            {
+                euler += 1.0/(Double)retornaFat(i);
+            }
+
+            Console.WriteLine($"\n  Estimativa: {euler:N10}");
 
             EsperaTecla();
         }
         static void Nothing()
         {
+            Console.Clear();
+            
             Console.WriteLine("\n  There is nothing to see here, go away!!!");
 
             EsperaTecla();
@@ -418,13 +526,16 @@ namespace Projeto2021_2
         {
             Console.Clear();
 
-            Console.WriteLine("  ────────▄▄▄▄▄▄────────   Projetinho realizado para finalização");
-            Console.WriteLine("  ──────█▀──────▀█──────   do módulo de programação em .NET C#,");
-            Console.WriteLine("  ─────█─▄▀█──█▀▄─█─────   alternando em versões.");
-            Console.WriteLine("  ────▐▌──────────▐▌────");
-            Console.WriteLine("  ────█▌▀▄──▄▄──▄▀▐█────   user: vinicioslop");
-            Console.WriteLine("  ───▐██──▀▀──▀▀──██▌───   link: LINK AQUI");
-            Console.WriteLine("  ──▄████▄──▐▌──▄████▄──");
+            Console.WriteLine("  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   Projetinho realizado para finalização");
+            Console.WriteLine(" █────────▄▄▄▄▄▄────────█  do módulo de programação em .NET C#,");
+            Console.WriteLine(" █──────█▀──────▀█──────█  alternando em versões.");
+            Console.WriteLine(" █─────█─▄▀█──█▀▄─█─────█  ");
+            Console.WriteLine(" █────▐▌──────────▐▌────█  user: vinicioslop");
+            Console.WriteLine(" █────█▌▀▄──▄▄──▄▀▐█────█  link: LINK AQUI");
+            Console.WriteLine(" █───▐██──▀▀──▀▀──██▌───█  ");
+            Console.WriteLine(" █──▄████▄──▐▌──▄████▄──█  ");
+            Console.WriteLine("  ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀   ");
+
             Console.WriteLine("\n");
 
             // A IMPLEMENTAR
