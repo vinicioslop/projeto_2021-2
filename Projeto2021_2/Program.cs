@@ -296,6 +296,11 @@ namespace Projeto2021_2
 
                 Console.Write("  Informe o divisor..: ");
                 divisor = Convert.ToDouble(Console.ReadLine());
+
+                if (divisor == 0)
+                {
+                    throw new Exception("Não é possível dividir por 0!");
+                }
             }
             catch (Exception ex)
             {
@@ -467,8 +472,21 @@ namespace Projeto2021_2
             
             double pi = 0.0, aux = 3;
 
-            Console.Write("\n  Quantas iterações? ");
-            int iteracoes = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                Console.Write("\n  Quantas iterações? ");
+                int iteracoes = Convert.ToInt32(Console.ReadLine());
+
+                if (iteracoes < 1)
+                {
+                    throw new Exception("Quantidade de iterações inválida! (menor que 1)");
+                }
+            }
+            catch (Exception ex)
+            {
+                TrataErro(ex);
+                return;
+            }
 
             for (int i = 0; i <= iteracoes - 1; i++)
             {
@@ -502,8 +520,21 @@ namespace Projeto2021_2
             
             double euler = 0;
 
-            Console.Write("\n  Quantas iterações (<=33)? ");
-            double iteracoes = Convert.ToDouble(Console.ReadLine());
+            try
+            {
+                Console.Write("\n  Quantas iterações (<=33)? ");
+                double iteracoes = Convert.ToDouble(Console.ReadLine());
+
+                if (iteracoes < 1)
+                {
+                    throw new Exception("Quantidade de iterações inválida! (menor que 1)");
+                }
+            }
+            catch (Exception ex)
+            {
+                TrataErro(ex);
+                return;
+            }
 
             for (int i = 0; i < iteracoes; i++)
             {
