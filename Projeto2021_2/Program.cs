@@ -103,7 +103,7 @@ namespace Projeto2021_2
             Console.WriteLine(" +==================================================+");
             Console.WriteLine(" | 1 - ESTIMA PI                                    |");
             Console.WriteLine(" | 2 - ESTIMA EULER                                 |");
-            Console.WriteLine(" | 3 - RETÂNGULO COM CONTORNO                       |");
+            Console.WriteLine(" |                                                  |");
             Console.WriteLine(" |                                                  |");
             Console.WriteLine(" |                                                  |");
             Console.WriteLine(" |                                                  |");
@@ -165,7 +165,7 @@ namespace Projeto2021_2
                     EstimaEuler();
                     break;
                 case 3:
-                    RetContorno();
+                    Nothing();
                     break;
                 case 4:
                     Nothing();
@@ -559,73 +559,6 @@ namespace Projeto2021_2
 
             return false;
         }
-        static bool RetContorno()
-        {
-            Console.Clear();
-
-            Console.WriteLine("  +**************************************************+");
-            Console.WriteLine("  | █████████████ RETÂNGULO COM CONTORNO ███████████ |");
-            Console.WriteLine("  +==================================================+\n");
-
-            int largura = 0, altura = 0;
-            bool valido = false;
-
-            Console.WriteLine("  Tamanho do Retângulo:");
-
-            do
-            {
-                try
-                {
-                    Console.Write("  Largura..: ");
-                    largura = Convert.ToInt32(Console.ReadLine());
-
-                    Console.Write("  Altura...: ");
-                    altura = Convert.ToInt32(Console.ReadLine());
-
-                    if (largura < 1 || largura > 10 || altura < 1 || altura > 10)
-                    {
-                        throw new Exception("\nDados inserido são inválidos!\nValores precisam estar entre 1 e 10.\n");
-                    }
-                    else
-                    {
-                        valido = true;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    TrataErro(ex);
-                    return false;
-                }
-            } while (!valido);
-
-            Console.WriteLine();
-
-            for (int x = 0; x < altura; x++)
-            {
-                Console.Write("  ");
-                for (int y = 0; y < largura; y++)
-                {
-                    if (x == 0 || x == (altura - 1))
-                    {
-                        Console.Write("*");
-                    }
-                    else if (y == 0 || y == (largura - 1))
-                    {
-                        Console.Write("*");
-                    }
-                    else
-                    {
-                        Console.Write(" ");
-                    }
-                }
-
-                Console.WriteLine();
-            }
-
-            EsperaTecla();
-
-            return false;
-        }
         static void Nothing()
         {
             Console.Clear();
@@ -643,7 +576,7 @@ namespace Projeto2021_2
             Console.WriteLine(" █──────█▀──────▀█──────█  alternando em versões.");
             Console.WriteLine(" █─────█─▄▀█──█▀▄─█─────█  ");
             Console.WriteLine(" █────▐▌──────────▐▌────█  user: vinicioslop");
-            Console.WriteLine(" █────█▌▀▄──▄▄──▄▀▐█────█  link: https://github.com/vinicioslop/projeto_2021-2");
+            Console.WriteLine(" █────█▌▀▄──▄▄──▄▀▐█────█  link: https://vinicioslop.github.io/projeto_2021-2/");
             Console.WriteLine(" █───▐██──▀▀──▀▀──██▌───█  ");
             Console.WriteLine(" █──▄████▄──▐▌──▄████▄──█  ");
             Console.WriteLine("  ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀   ");
@@ -657,9 +590,19 @@ namespace Projeto2021_2
                 Console.Write("  Sair do programa? (S)im ou (N)ão: ");
                 opcao = Console.ReadLine();
 
-                if (opcao != "N" || opcao != "s" || opcao != "S")
+                if (opcao.ToUpper() == "S")
                 {
-                    throw new Exception("Valor inválido!");
+                    Console.WriteLine("\n  SAINDO...");
+
+                    EsperaTecla();
+
+                    return true;
+                }
+                else
+                {
+                    EsperaTecla();
+
+                    return false;
                 }
             }
             catch (Exception ex)
@@ -667,19 +610,6 @@ namespace Projeto2021_2
                 TrataErro(ex);
                 return false;
             }
-
-            if (opcao == "S")
-            {
-                Console.WriteLine("\n  SAINDO...");
-
-                EsperaTecla();
-
-                return true;
-            }
-
-            EsperaTecla();
-
-            return false;
         }
     }
 }
