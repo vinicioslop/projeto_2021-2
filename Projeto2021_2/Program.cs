@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace Projeto2021_2
 {
@@ -20,7 +20,6 @@ namespace Projeto2021_2
                         break;
                     default:
                         throw new Exception("Opção inválida!!!");
-                        break;
                 }
 
                 try
@@ -470,12 +469,12 @@ namespace Projeto2021_2
             Console.WriteLine("  | ███████████████████ ESTIMA PI ██████████████████ |");
             Console.WriteLine("  +==================================================+\n");
             
-            double pi = 0.0, aux = 3;
+            double pi = 0.0, aux = 3, iteracoes = 0;
 
             try
             {
                 Console.Write("\n  Quantas iterações? ");
-                int iteracoes = Convert.ToInt32(Console.ReadLine());
+                iteracoes = Convert.ToInt32(Console.ReadLine());
 
                 if (iteracoes < 1)
                 {
@@ -519,11 +518,12 @@ namespace Projeto2021_2
             Console.WriteLine("  +==================================================+\n");
             
             double euler = 0;
+            int iteracoes = 0;
 
             try
             {
                 Console.Write("\n  Quantas iterações (<=33)? ");
-                double iteracoes = Convert.ToDouble(Console.ReadLine());
+                iteracoes = Convert.ToInt32(Console.ReadLine());
 
                 if (iteracoes < 1)
                 {
