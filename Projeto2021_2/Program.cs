@@ -562,7 +562,7 @@ namespace Projeto2021_2
             Console.WriteLine(" █──────█▀──────▀█──────█  alternando em versões.");
             Console.WriteLine(" █─────█─▄▀█──█▀▄─█─────█  ");
             Console.WriteLine(" █────▐▌──────────▐▌────█  user: vinicioslop");
-            Console.WriteLine(" █────█▌▀▄──▄▄──▄▀▐█────█  link: LINK AQUI");
+            Console.WriteLine(" █────█▌▀▄──▄▄──▄▀▐█────█  link: https://github.com/vinicioslop/projeto_2021-2");
             Console.WriteLine(" █───▐██──▀▀──▀▀──██▌───█  ");
             Console.WriteLine(" █──▄████▄──▐▌──▄████▄──█  ");
             Console.WriteLine("  ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀   ");
