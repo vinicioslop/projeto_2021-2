@@ -573,6 +573,11 @@ namespace Projeto2021_2
             Console.Write("  Sair do programa? (S)im ou (N)ão: ");
             string opcao = Console.ReadLine().ToUpper();
 
+            if (opcao.ToUpper() == "S")
+            {
+                Console.WriteLine("\n  SAINDO...");
+            }
+
             EsperaTecla();
         }
     }
