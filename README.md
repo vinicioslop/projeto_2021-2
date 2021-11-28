@@ -28,12 +28,12 @@ Créditos
 
 Baixe o arquivo abaixo. Descompacte na pasta desejada.
 
-[🗃 Download do arquivo .zip]//(dist/ObrigadoDevCSharp.zip)
+[🗃 Download do arquivo .zip](dist/Projeto2021_2.zip)
 
 Execute utilizando o comando:
 
 ```
-dotnet A CRIAR ARQUIVO
+dotnet Projeto2021_2.dll
 ```
 
 Ou, se você estiver no Windows, pode dar um duplo-clique no ícone do programa.
