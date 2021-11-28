@@ -1,6 +1,6 @@
 # Projeto final de DevCSharp
 
-Este software executa uma interface para execução de operações matemáticas disponíveis no mesmo.
+Este programa disponibiliza uma interface para execução de operações matemáticas disponíveis no mesmo.
 
 ## Exemplo
 
@@ -29,11 +29,12 @@ Créditos
 Este projeto foi realizado para execução em console, sem utilização de Programação Orientada a Objetos, então não estranhe que ele é gigantesco 🙃
 
 Guia básico de navegação:
-- Opção 9: Alterna entre as páginas disponíveis no programa;
-- Opção 0: Sai do Programa.
+- Para escolher alguma opção basta digitar o número referente para a funcionalidade escolhida (1 à 8);
+- Caso queira passar para a próxima página digite 9;
+- Caso queira sair do programa digite 0.
 
 Outras informações:
-- Caso ocorra algum problema durante a execução do programa será exibido uma mensagem, com o contexto do problema e a execução será pulada, retornando para a página acessada antes da execução do programa.
+- Caso ocorra algum problema durante a execução do programa será exibido uma mensagem, com o contexto do problema e a execução será pulada, retornando para a página acessada antes da execução daquela funcionalidade.
 
 ## _Download_
 
@@ -56,4 +57,4 @@ Ou, se você estiver no Windows, pode dar um duplo-clique no ícone do programa.
 
 ---
 
-Todos os direitos reservados. PIRATARIA É CRIME.
+É sobre isso...
