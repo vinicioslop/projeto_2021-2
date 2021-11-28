@@ -416,16 +416,16 @@ namespace Projeto2021_2
 
             EsperaTecla();
         }
-        static int retornaFat(int entrada)
+        static int retornaFat(int valor)
         {
             int fat = 1;
 
-            if (entrada == 0)
+            if (valor == 0)
             {
                 return fat;
             }
 
-            for (int i = 2; i <= entrada; i++)
+            for (int i = 2; i <= valor; i++)
             {
                 fat *= i;
             }
@@ -440,15 +440,15 @@ namespace Projeto2021_2
             Console.WriteLine("  | ███████ MÁXIMO DIVISOR COMUM (ITERATIVO) ███████ |");
             Console.WriteLine("  +==================================================+\n");
 
-            int valor01 = 0, valor02 = 0;
+            int valorA = 0, valorB = 0, r = -1;
 
             try
             {
                 Console.Write("  Digite o 1º número (a): ");
-                valor01 = Convert.ToInt32(Console.ReadLine());
+                valorA = Convert.ToInt32(Console.ReadLine());
 
                 Console.Write("  Digite o 2º número (b): ");
-                valor02 = Convert.ToInt32(Console.ReadLine());
+                valorB = Convert.ToInt32(Console.ReadLine());
             }
             catch (Exception ex)
             {
@@ -456,16 +456,14 @@ namespace Projeto2021_2
                 return;
             }
 
-            int r = -1, a = valor01, b = valor02;
-
-            while (b != 0)
+            while (valorB != 0)
             {
-                r = a % b;
-                a = b;
-                b = r;
+                r = valorA % valorB;
+                valorA = valorB;
+                valorB = r;
             }
 
-            int mdc = a;
+            int mdc = valorA;
 
             Console.WriteLine($"\n  MDC(a, b) = {mdc}");
 
