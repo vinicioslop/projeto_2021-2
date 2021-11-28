@@ -3,14 +3,20 @@
 namespace Projeto2021_2
 {
     class Program
-    {        
+    {
         static void Main(string[] args)
         {
             int opcao = -1, pagina = 0;
+            bool saindo = false;
 
             do
             {
-                switch(pagina)
+                if (saindo)
+                {
+                    break;
+                }
+
+                switch (pagina)
                 {
                     case 0:
                         PrimeiraPagina();
@@ -27,7 +33,7 @@ namespace Projeto2021_2
                     Console.Write("\n  Opção desejada: ");
                     opcao = Convert.ToInt32(Console.ReadLine());
 
-                    if(opcao == 9)
+                    if (opcao == 9)
                     {
                         if (pagina == 1)
                         {
@@ -51,7 +57,7 @@ namespace Projeto2021_2
                 }
                 else
                 {
-                    DirecionaOpcaoSegundaPagina(opcao);
+                    saindo = DirecionaOpcaoSegundaPagina(opcao);
                 }
             } while (opcao != 0);
         }
@@ -97,7 +103,7 @@ namespace Projeto2021_2
             Console.WriteLine(" +==================================================+");
             Console.WriteLine(" | 1 - ESTIMA PI                                    |");
             Console.WriteLine(" | 2 - ESTIMA EULER                                 |");
-            Console.WriteLine(" |                                                  |");
+            Console.WriteLine(" | 3 - RETÂNGULO COM CONTORNO                       |");
             Console.WriteLine(" |                                                  |");
             Console.WriteLine(" |                                                  |");
             Console.WriteLine(" |                                                  |");
@@ -146,8 +152,10 @@ namespace Projeto2021_2
                     break;
             }
         }
-        static void DirecionaOpcaoSegundaPagina(int opcao)
+        static bool DirecionaOpcaoSegundaPagina(int opcao)
         {
+            bool sair = false;
+
             switch (opcao)
             {
                 case 1:
@@ -157,7 +165,7 @@ namespace Projeto2021_2
                     EstimaEuler();
                     break;
                 case 3:
-                    Nothing();
+                    RetContorno();
                     break;
                 case 4:
                     Nothing();
@@ -172,7 +180,7 @@ namespace Projeto2021_2
                     Nothing();
                     break;
                 case 8:
-                    Creditos();
+                    sair = Creditos();
                     break;
                 case 0:
                     Console.WriteLine("\n  Saindo...");
@@ -182,6 +190,8 @@ namespace Projeto2021_2
                     EsperaTecla();
                     break;
             }
+
+            return sair;
         }
         static void EsperaTecla()
         {
@@ -409,7 +419,7 @@ namespace Projeto2021_2
         static int retornaFat(int entrada)
         {
             int fat = 1;
-            
+
             if (entrada == 0)
             {
                 return fat;
@@ -429,7 +439,7 @@ namespace Projeto2021_2
             Console.WriteLine("  +**************************************************+");
             Console.WriteLine("  | ███████ MÁXIMO DIVISOR COMUM (ITERATIVO) ███████ |");
             Console.WriteLine("  +==================================================+\n");
-            
+
             int valor01 = 0, valor02 = 0;
 
             try
@@ -440,7 +450,7 @@ namespace Projeto2021_2
                 Console.Write("  Digite o 2º número (b): ");
                 valor02 = Convert.ToInt32(Console.ReadLine());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 TrataErro(ex);
                 return;
@@ -461,14 +471,14 @@ namespace Projeto2021_2
 
             EsperaTecla();
         }
-        static void EstimaPI()
+        static bool EstimaPI()
         {
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
             Console.WriteLine("  | ███████████████████ ESTIMA PI ██████████████████ |");
             Console.WriteLine("  +==================================================+\n");
-            
+
             double pi = 0.0, aux = 3, iteracoes = 0;
 
             try
@@ -484,7 +494,7 @@ namespace Projeto2021_2
             catch (Exception ex)
             {
                 TrataErro(ex);
-                return;
+                return false;
             }
 
             for (int i = 0; i <= iteracoes - 1; i++)
@@ -503,20 +513,22 @@ namespace Projeto2021_2
 
             pi = pi - 1;
             pi = pi * 4;
-            pi = pi*(-1);
+            pi = pi * (-1);
 
             Console.WriteLine($"\n  Estimativa: {pi:N6}");
 
             EsperaTecla();
+
+            return false;
         }
-        static void EstimaEuler()
+        static bool EstimaEuler()
         {
             Console.Clear();
 
             Console.WriteLine("  +**************************************************+");
             Console.WriteLine("  | ██████████████████ ESTIMA EULER ████████████████ |");
             Console.WriteLine("  +==================================================+\n");
-            
+
             double euler = 0;
             int iteracoes = 0;
 
@@ -533,27 +545,96 @@ namespace Projeto2021_2
             catch (Exception ex)
             {
                 TrataErro(ex);
-                return;
+                return false;
             }
 
             for (int i = 0; i < iteracoes; i++)
             {
-                euler += 1.0/(Double)retornaFat(i);
+                euler += 1.0 / (Double)retornaFat(i);
             }
 
             Console.WriteLine($"\n  Estimativa: {euler:N10}");
 
             EsperaTecla();
+
+            return false;
+        }
+        static bool RetContorno()
+        {
+            Console.Clear();
+
+            Console.WriteLine("  +**************************************************+");
+            Console.WriteLine("  | █████████████ RETÂNGULO COM CONTORNO ███████████ |");
+            Console.WriteLine("  +==================================================+\n");
+
+            int largura = 0, altura = 0;
+            bool valido = false;
+
+            Console.WriteLine("  Tamanho do Retângulo:");
+
+            do
+            {
+                try
+                {
+                    Console.Write("  Largura..: ");
+                    largura = Convert.ToInt32(Console.ReadLine());
+
+                    Console.Write("  Altura...: ");
+                    altura = Convert.ToInt32(Console.ReadLine());
+
+                    if (largura < 1 || largura > 10 || altura < 1 || altura > 10)
+                    {
+                        throw new Exception("\nDados inserido são inválidos!\nValores precisam estar entre 1 e 10.\n");
+                    }
+                    else
+                    {
+                        valido = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    TrataErro(ex);
+                    return false;
+                }
+            } while (!valido);
+
+            Console.WriteLine();
+
+            for (int x = 0; x < altura; x++)
+            {
+                Console.Write("  ");
+                for (int y = 0; y < largura; y++)
+                {
+                    if (x == 0 || x == (altura - 1))
+                    {
+                        Console.Write("*");
+                    }
+                    else if (y == 0 || y == (largura - 1))
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+
+                Console.WriteLine();
+            }
+
+            EsperaTecla();
+
+            return false;
         }
         static void Nothing()
         {
             Console.Clear();
-            
+
             Console.WriteLine("\n  There is nothing to see here, go away!!!");
 
             EsperaTecla();
         }
-        static void Creditos()
+        static bool Creditos()
         {
             Console.Clear();
 
@@ -569,16 +650,36 @@ namespace Projeto2021_2
 
             Console.WriteLine("\n");
 
-            // A IMPLEMENTAR
-            Console.Write("  Sair do programa? (S)im ou (N)ão: ");
-            string opcao = Console.ReadLine().ToUpper();
+            string opcao = "N";
 
-            if (opcao.ToUpper() == "S")
+            try
+            {
+                Console.Write("  Sair do programa? (S)im ou (N)ão: ");
+                opcao = Console.ReadLine();
+
+                if (opcao != "N" || opcao != "s" || opcao != "S")
+                {
+                    throw new Exception("Valor inválido!");
+                }
+            }
+            catch (Exception ex)
+            {
+                TrataErro(ex);
+                return false;
+            }
+
+            if (opcao == "S")
             {
                 Console.WriteLine("\n  SAINDO...");
+
+                EsperaTecla();
+
+                return true;
             }
 
             EsperaTecla();
+
+            return false;
         }
     }
 }
