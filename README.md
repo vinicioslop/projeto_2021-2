@@ -1,6 +1,6 @@
 # Projeto final de DevCSharp
 
-Este software exibe na tela do usuário um agradecimento ao programa Dev C#.
+Este software executa uma interface para execução de operações matemáticas disponíveis no mesmo.
 
 ## Exemplo
 
@@ -24,6 +24,17 @@ Créditos
 
 ![Tela de Créditos](telas/tela_creditos.png)
 
+## Documentação
+
+Este projeto foi realizado para execução em console, sem utilização de Programação Orientada a Objetos, então não estranhe que ele é gigantesco 🙃
+
+Guia básico de navegação:
+- Opção 9: Alterna entre as páginas disponíveis no programa;
+- Opção 0: Sai do Programa.
+
+Outras informações:
+- Caso ocorra algum problema durante a execução do programa será exibido uma mensagem, com o contexto do problema e a execução será pulada, retornando para a página acessada antes da execução do programa.
+
 ## _Download_
 
 Baixe o arquivo abaixo. Descompacte na pasta desejada.
@@ -40,7 +51,8 @@ Ou, se você estiver no Windows, pode dar um duplo-clique no ícone do programa.
 
 ## Agradecimentos
 
-- A INSERIR
+- Prof. Ermogenes
+- Prof. Diego Neri
 
 ---
 
