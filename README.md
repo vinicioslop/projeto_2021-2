@@ -22,7 +22,7 @@ Exemplo de MDC
 
 Créditos
 
-![Tela de Créditos]//(telas/tela_mdc.png)
+![Tela de Créditos](telas/tela_sobre.png)
 
 ## _Download_
 
