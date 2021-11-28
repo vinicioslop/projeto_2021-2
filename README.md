@@ -4,21 +4,37 @@ Este programa disponibiliza uma interface para execução de operações matemá
 
 ## Exemplo
 
-Tela Inicial
+Tela Inicial - Primeira Página
 
-![Tela do Inicial do Projeto](telas/tela_inicial.png)
+![Tela do Inicial - Primeira Página](telas/tela_inicial.png)
 
-Segunda Página
+Tela Inicial - Segunda Página
 
-![Segunda Página do Projeto](telas/segunda_tela.png)
+![Tela do Inicial - Segunda Página](telas/segunda_tela.png)
 
 Exemplo de Soma
 
 ![Exemplo de Soma](telas/tela_exemplo_soma.png)
 
-Exemplo de MDC
+Exemplo de Subtração
 
-![Exemplo de MDC](telas/tela_mdc.png)
+![Exemplo de Subtração](telas/tela_exemplo_sub.png)
+
+Exemplo de Multiplicação
+
+![Exemplo de Multiplicação](telas/tela_exemplo_mult.png)
+
+Exemplo de Divisão
+
+![Exemplo de Divisão](telas/tela_exemplo_div.png)
+
+Exemplo de Exponenciação
+
+![Exemplo de Exponenciação](telas/tela_exemplo_exp.png)
+
+Exemplo de Radiciação
+
+![Exemplo de Radiciação](telas/tela_exemplo_rad.png)
 
 Créditos
 
